@@ -1,0 +1,53 @@
+# User registration
+###
+POST  http://127.0.0.1:8000/users/
+Content-Type: application/json
+
+{
+    "username" : "Gokul",
+    "email" : "gokul@gmail.com",
+    "password" : "gokul@121"
+}
+
+###
+GET http://127.0.0.1:8000/users/
+Accept: application/json
+
+# Add movie details as admin
+###
+POST  http://127.0.0.1:8000/movies/
+Content-Type: application/json
+Authorization: Basic anas:ANASMON2319k
+
+{
+    "movie_name" : "Ramayanam",
+    "genre" : "Fantasy,History",
+    "duration" : 3,
+    "language" : "Telungu",
+    "release_date" : "2025-10-12"
+}
+
+#Add show details
+###
+POST http://127.0.0.1:8000/shows/
+Content-Type: application/json
+
+{
+    "movie" : 1,
+    "show_date" : "2026-12-12",
+    "show_time" : "10:00:00",
+    "ticket_price" : 200.00,
+    "total_seats" : 50,
+    "available_seats" : 50
+}
+
+#Booking 
+###
+POST http://127.0.0.1:8000/booking/
+Content-Type: application/json
+Authorization: Basic Anas:anas121
+
+{
+    "shows" : 1,
+    "number_of_seats" : 5
+}
